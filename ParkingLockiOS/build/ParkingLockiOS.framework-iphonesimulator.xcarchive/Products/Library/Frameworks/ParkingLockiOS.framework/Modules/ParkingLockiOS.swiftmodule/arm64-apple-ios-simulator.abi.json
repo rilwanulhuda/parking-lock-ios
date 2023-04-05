@@ -1,0 +1,2928 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HandleLockDelegate",
+        "printedName": "HandleLockDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "lockDidTurnDown",
+            "printedName": "lockDidTurnDown()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS18HandleLockDelegateP15lockDidTurnDownyyF",
+            "mangledName": "$s14ParkingLockiOS18HandleLockDelegateP15lockDidTurnDownyyF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.HandleLockDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.HandleLockDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "lockDidTurnUp",
+            "printedName": "lockDidTurnUp()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS18HandleLockDelegateP13lockDidTurnUpyyF",
+            "mangledName": "$s14ParkingLockiOS18HandleLockDelegateP13lockDidTurnUpyyF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.HandleLockDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.HandleLockDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUpdateBluetoothState",
+            "printedName": "didUpdateBluetoothState(isOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS18HandleLockDelegateP23didUpdateBluetoothState4isOnySb_tF",
+            "mangledName": "$s14ParkingLockiOS18HandleLockDelegateP23didUpdateBluetoothState4isOnySb_tF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.HandleLockDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.HandleLockDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bluetoothIsUnauthorized",
+            "printedName": "bluetoothIsUnauthorized()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS18HandleLockDelegateP23bluetoothIsUnauthorizedyyF",
+            "mangledName": "$s14ParkingLockiOS18HandleLockDelegateP23bluetoothIsUnauthorizedyyF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.HandleLockDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.HandleLockDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didConnectParkingLock",
+            "printedName": "didConnectParkingLock()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS18HandleLockDelegateP010didConnectaE0yyF",
+            "mangledName": "$s14ParkingLockiOS18HandleLockDelegateP010didConnectaE0yyF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.HandleLockDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.HandleLockDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14ParkingLockiOS18HandleLockDelegateP",
+        "mangledName": "$s14ParkingLockiOS18HandleLockDelegateP",
+        "moduleName": "ParkingLockiOS",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HandleLock",
+        "printedName": "HandleLock",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HandleLock",
+                "printedName": "ParkingLockiOS.HandleLock",
+                "usr": "s:14ParkingLockiOS10HandleLockC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS10HandleLockC14sharedInstanceACvpZ",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC14sharedInstanceACvpZ",
+            "moduleName": "ParkingLockiOS",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HandleLock",
+                    "printedName": "ParkingLockiOS.HandleLock",
+                    "usr": "s:14ParkingLockiOS10HandleLockC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC14sharedInstanceACvgZ",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC14sharedInstanceACvgZ",
+                "moduleName": "ParkingLockiOS",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.HandleLockDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HandleLockDelegate",
+                    "printedName": "ParkingLockiOS.HandleLockDelegate",
+                    "usr": "s:14ParkingLockiOS18HandleLockDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvp",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvp",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ParkingLockiOS.HandleLockDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HandleLockDelegate",
+                        "printedName": "ParkingLockiOS.HandleLockDelegate",
+                        "usr": "s:14ParkingLockiOS18HandleLockDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvg",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ParkingLockiOS.HandleLockDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HandleLockDelegate",
+                        "printedName": "ParkingLockiOS.HandleLockDelegate",
+                        "usr": "s:14ParkingLockiOS18HandleLockDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvs",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvs",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvM",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC8delegateAA0dE8Delegate_pSgvM",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didFailCheckInOutRequest",
+            "printedName": "didFailCheckInOutRequest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvp",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvp",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvg",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvs",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvs",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvM",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC24didFailCheckInOutRequestSbvM",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secretKey",
+            "printedName": "secretKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS10HandleLockC9secretKeySSvp",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC9secretKeySSvp",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC9secretKeySSvg",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC9secretKeySSvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC9secretKeySSvs",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC9secretKeySSvs",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC9secretKeySSvM",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC9secretKeySSvM",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLockConnected",
+            "printedName": "isLockConnected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS10HandleLockC02isE9ConnectedSbvp",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC02isE9ConnectedSbvp",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10HandleLockC02isE9ConnectedSbvg",
+                "mangledName": "$s14ParkingLockiOS10HandleLockC02isE9ConnectedSbvg",
+                "moduleName": "ParkingLockiOS",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "initBluetoothManger",
+            "printedName": "initBluetoothManger()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC19initBluetoothMangeryyF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC19initBluetoothMangeryyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deinitBluetoothManager",
+            "printedName": "deinitBluetoothManager()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC22deinitBluetoothManageryyF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC22deinitBluetoothManageryyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didEnterBackgroundMode",
+            "printedName": "didEnterBackgroundMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC22didEnterBackgroundModeyyF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC22didEnterBackgroundModeyyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shouldDelayingScanning",
+            "printedName": "shouldDelayingScanning(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC22shouldDelayingScanningyySbF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC22shouldDelayingScanningyySbF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkParkingLockType",
+            "printedName": "checkParkingLockType(deviceId:lockType:secretKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC05checkaE4Type8deviceId04lockG09secretKeyySSSg_SSAHtF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC05checkaE4Type8deviceId04lockG09secretKeyySSSg_SSAHtF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startScanning",
+            "printedName": "startScanning()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC13startScanningyyF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC13startScanningyyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleBluetoothParkingLock",
+            "printedName": "handleBluetoothParkingLock(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockActionHex",
+                "printedName": "ParkingLockiOS.LockActionHex",
+                "usr": "s:14ParkingLockiOS13LockActionHexO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC015handleBluetoothaE06actionyAA0E9ActionHexO_tF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC015handleBluetoothaE06actionyAA0E9ActionHexO_tF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUpdateBluetoothState",
+            "printedName": "didUpdateBluetoothState(isOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC23didUpdateBluetoothState4isOnySb_tF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC23didUpdateBluetoothState4isOnySb_tF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bluetoothIsUnauthorized",
+            "printedName": "bluetoothIsUnauthorized()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC23bluetoothIsUnauthorizedyyF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC23bluetoothIsUnauthorizedyyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didConnectParkingLock",
+            "printedName": "didConnectParkingLock()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC010didConnectaE0yyF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC010didConnectaE0yyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didDisconnectParkingLock",
+            "printedName": "didDisconnectParkingLock(isBluetoothOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC013didDisconnectaE013isBluetoothOnySb_tF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC013didDisconnectaE013isBluetoothOnySb_tF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUpdateLockStatus",
+            "printedName": "didUpdateLockStatus(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockStatus",
+                "printedName": "ParkingLockiOS.LockStatus",
+                "usr": "s:14ParkingLockiOS10LockStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC09didUpdateE6StatusyyAA0eH0OF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC09didUpdateE6StatusyyAA0eH0OF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didHandleLock",
+            "printedName": "didHandleLock(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.LockHandleResult?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult",
+                    "printedName": "ParkingLockiOS.LockHandleResult",
+                    "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.LockHandleResult2?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult2",
+                    "printedName": "ParkingLockiOS.LockHandleResult2",
+                    "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10HandleLockC03diddE0yyAA0eD6ResultOSg_AA0eD7Result2OSgtF",
+            "mangledName": "$s14ParkingLockiOS10HandleLockC03diddE0yyAA0eD6ResultOSg_AA0eD7Result2OSgtF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14ParkingLockiOS10HandleLockC",
+        "mangledName": "$s14ParkingLockiOS10HandleLockC",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "BLEClassManagerDelegate",
+            "printedName": "BLEClassManagerDelegate",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreBluetooth",
+        "printedName": "CoreBluetooth",
+        "declKind": "Import",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BLEClassManagerDelegate",
+        "printedName": "BLEClassManagerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didUpdateBluetoothState",
+            "printedName": "didUpdateBluetoothState(isOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP23didUpdateBluetoothState4isOnySb_tF",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP23didUpdateBluetoothState4isOnySb_tF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.BLEClassManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.BLEClassManagerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bluetoothIsUnauthorized",
+            "printedName": "bluetoothIsUnauthorized()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP23bluetoothIsUnauthorizedyyF",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP23bluetoothIsUnauthorizedyyF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.BLEClassManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.BLEClassManagerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didConnectParkingLock",
+            "printedName": "didConnectParkingLock()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP010didConnectA4LockyyF",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP010didConnectA4LockyyF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.BLEClassManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.BLEClassManagerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didDisconnectParkingLock",
+            "printedName": "didDisconnectParkingLock(isBluetoothOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP013didDisconnectA4Lock13isBluetoothOnySb_tF",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP013didDisconnectA4Lock13isBluetoothOnySb_tF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.BLEClassManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.BLEClassManagerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUpdateLockStatus",
+            "printedName": "didUpdateLockStatus(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockStatus",
+                "printedName": "ParkingLockiOS.LockStatus",
+                "usr": "s:14ParkingLockiOS10LockStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP19didUpdateLockStatusyyAA0iJ0OF",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP19didUpdateLockStatusyyAA0iJ0OF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.BLEClassManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.BLEClassManagerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didHandleLock",
+            "printedName": "didHandleLock(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.LockHandleResult?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult",
+                    "printedName": "ParkingLockiOS.LockHandleResult",
+                    "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.LockHandleResult2?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult2",
+                    "printedName": "ParkingLockiOS.LockHandleResult2",
+                    "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP13didHandleLockyyAA0iH6ResultOSg_AA0iH7Result2OSgtF",
+            "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP13didHandleLockyyAA0iH6ResultOSg_AA0iH7Result2OSgtF",
+            "moduleName": "ParkingLockiOS",
+            "genericSig": "<τ_0_0 where τ_0_0 : ParkingLockiOS.BLEClassManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : ParkingLockiOS.BLEClassManagerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP",
+        "mangledName": "$s14ParkingLockiOS23BLEClassManagerDelegateP",
+        "moduleName": "ParkingLockiOS",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BLEClassManager",
+        "printedName": "BLEClassManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BLEClassManager",
+                "printedName": "ParkingLockiOS.BLEClassManager",
+                "usr": "c:@M@ParkingLockiOS@objc(cs)BLEClassManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS15BLEClassManagerC14sharedInstanceACvpZ",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC14sharedInstanceACvpZ",
+            "moduleName": "ParkingLockiOS",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEClassManager",
+                    "printedName": "ParkingLockiOS.BLEClassManager",
+                    "usr": "c:@M@ParkingLockiOS@objc(cs)BLEClassManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC14sharedInstanceACvgZ",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC14sharedInstanceACvgZ",
+                "moduleName": "ParkingLockiOS",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shouldDelayScanning",
+            "printedName": "shouldDelayScanning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvp",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvp",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvg",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvs",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvs",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvM",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC19shouldDelayScanningSbvM",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.BLEClassManagerDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEClassManagerDelegate",
+                    "printedName": "ParkingLockiOS.BLEClassManagerDelegate",
+                    "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvp",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvp",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ParkingLockiOS.BLEClassManagerDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEClassManagerDelegate",
+                        "printedName": "ParkingLockiOS.BLEClassManagerDelegate",
+                        "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvg",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ParkingLockiOS.BLEClassManagerDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEClassManagerDelegate",
+                        "printedName": "ParkingLockiOS.BLEClassManagerDelegate",
+                        "usr": "s:14ParkingLockiOS23BLEClassManagerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvs",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvs",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvM",
+                "mangledName": "$s14ParkingLockiOS15BLEClassManagerC8delegateAA0dE8Delegate_pSgvM",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BLEClassManager",
+                "printedName": "ParkingLockiOS.BLEClassManager",
+                "usr": "c:@M@ParkingLockiOS@objc(cs)BLEClassManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ParkingLockiOS@objc(cs)BLEClassManager(im)init",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerCACycfc",
+            "moduleName": "ParkingLockiOS",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManagerDidUpdateState",
+            "printedName": "centralManagerDidUpdateState(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)centralManagerDidUpdateState:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC07centralE14DidUpdateStateyySo09CBCentralE0CF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "centralManagerDidUpdateState:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManager",
+            "printedName": "centralManager(_:didDiscover:advertisementData:rssi:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSNumber",
+                "printedName": "Foundation.NSNumber",
+                "usr": "c:objc(cs)NSNumber"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)centralManager:didDiscoverPeripheral:advertisementData:RSSI:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC07centralE0_11didDiscover17advertisementData4rssiySo09CBCentralE0C_So12CBPeripheralCSDySSypGSo8NSNumberCtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "centralManager:didDiscoverPeripheral:advertisementData:RSSI:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManager",
+            "printedName": "centralManager(_:didConnect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)centralManager:didConnectPeripheral:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC07centralE0_10didConnectySo09CBCentralE0C_So12CBPeripheralCtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "centralManager:didConnectPeripheral:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManager",
+            "printedName": "centralManager(_:didDisconnectPeripheral:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)centralManager:didDisconnectPeripheral:error:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC07centralE0_23didDisconnectPeripheral5errorySo09CBCentralE0C_So12CBPeripheralCs5Error_pSgtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "centralManager:didDisconnectPeripheral:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManager",
+            "printedName": "centralManager(_:didFailToConnect:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)centralManager:didFailToConnectPeripheral:error:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC07centralE0_16didFailToConnect5errorySo09CBCentralE0C_So12CBPeripheralCs5Error_pSgtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "centralManager:didFailToConnectPeripheral:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "peripheral",
+            "printedName": "peripheral(_:didUpdateValueFor:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCharacteristic",
+                "printedName": "CoreBluetooth.CBCharacteristic",
+                "usr": "c:objc(cs)CBCharacteristic"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)peripheral:didUpdateValueForCharacteristic:error:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC10peripheral_17didUpdateValueFor5errorySo12CBPeripheralC_So16CBCharacteristicCs5Error_pSgtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "peripheral:didUpdateValueForCharacteristic:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "peripheral",
+            "printedName": "peripheral(_:didDiscoverCharacteristicsFor:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBService",
+                "printedName": "CoreBluetooth.CBService",
+                "usr": "c:objc(cs)CBService"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)peripheral:didDiscoverCharacteristicsForService:error:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC10peripheral_29didDiscoverCharacteristicsFor5errorySo12CBPeripheralC_So9CBServiceCs5Error_pSgtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "peripheral:didDiscoverCharacteristicsForService:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "peripheral",
+            "printedName": "peripheral(_:didDiscoverServices:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)peripheral:didDiscoverServices:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC10peripheral_19didDiscoverServicesySo12CBPeripheralC_s5Error_pSgtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "peripheral:didDiscoverServices:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "peripheral",
+            "printedName": "peripheral(_:didWriteValueFor:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCharacteristic",
+                "printedName": "CoreBluetooth.CBCharacteristic",
+                "usr": "c:objc(cs)CBCharacteristic"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ParkingLockiOS@objc(cs)BLEClassManager(im)peripheral:didWriteValueForCharacteristic:error:",
+            "mangledName": "$s14ParkingLockiOS15BLEClassManagerC10peripheral_16didWriteValueFor5errorySo12CBPeripheralC_So16CBCharacteristicCs5Error_pSgtF",
+            "moduleName": "ParkingLockiOS",
+            "objc_name": "peripheral:didWriteValueForCharacteristic:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ParkingLockiOS@objc(cs)BLEClassManager",
+        "mangledName": "$s14ParkingLockiOS15BLEClassManagerC",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LockHandleResult",
+        "printedName": "LockHandleResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unlocked",
+            "printedName": "unlocked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockHandleResult.Type) -> ParkingLockiOS.LockHandleResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult",
+                    "printedName": "ParkingLockiOS.LockHandleResult",
+                    "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockHandleResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockHandleResult",
+                        "printedName": "ParkingLockiOS.LockHandleResult",
+                        "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS16LockHandleResultO8unlockedyA2CmF",
+            "mangledName": "$s14ParkingLockiOS16LockHandleResultO8unlockedyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "locked",
+            "printedName": "locked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockHandleResult.Type) -> ParkingLockiOS.LockHandleResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult",
+                    "printedName": "ParkingLockiOS.LockHandleResult",
+                    "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockHandleResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockHandleResult",
+                        "printedName": "ParkingLockiOS.LockHandleResult",
+                        "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS16LockHandleResultO6lockedyA2CmF",
+            "mangledName": "$s14ParkingLockiOS16LockHandleResultO6lockedyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.LockHandleResult?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult",
+                    "printedName": "ParkingLockiOS.LockHandleResult",
+                    "usr": "s:14ParkingLockiOS16LockHandleResultO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14ParkingLockiOS16LockHandleResultO8rawValueACSgSS_tcfc",
+            "mangledName": "$s14ParkingLockiOS16LockHandleResultO8rawValueACSgSS_tcfc",
+            "moduleName": "ParkingLockiOS",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS16LockHandleResultO8rawValueSSvp",
+            "mangledName": "$s14ParkingLockiOS16LockHandleResultO8rawValueSSvp",
+            "moduleName": "ParkingLockiOS",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS16LockHandleResultO8rawValueSSvg",
+                "mangledName": "$s14ParkingLockiOS16LockHandleResultO8rawValueSSvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14ParkingLockiOS16LockHandleResultO",
+        "mangledName": "$s14ParkingLockiOS16LockHandleResultO",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LockHandleResult2",
+        "printedName": "LockHandleResult2",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unlocked",
+            "printedName": "unlocked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockHandleResult2.Type) -> ParkingLockiOS.LockHandleResult2",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult2",
+                    "printedName": "ParkingLockiOS.LockHandleResult2",
+                    "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockHandleResult2.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockHandleResult2",
+                        "printedName": "ParkingLockiOS.LockHandleResult2",
+                        "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS17LockHandleResult2O8unlockedyA2CmF",
+            "mangledName": "$s14ParkingLockiOS17LockHandleResult2O8unlockedyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "locked",
+            "printedName": "locked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockHandleResult2.Type) -> ParkingLockiOS.LockHandleResult2",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult2",
+                    "printedName": "ParkingLockiOS.LockHandleResult2",
+                    "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockHandleResult2.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockHandleResult2",
+                        "printedName": "ParkingLockiOS.LockHandleResult2",
+                        "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS17LockHandleResult2O6lockedyA2CmF",
+            "mangledName": "$s14ParkingLockiOS17LockHandleResult2O6lockedyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ParkingLockiOS.LockHandleResult2?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockHandleResult2",
+                    "printedName": "ParkingLockiOS.LockHandleResult2",
+                    "usr": "s:14ParkingLockiOS17LockHandleResult2O"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14ParkingLockiOS17LockHandleResult2O8rawValueACSgSS_tcfc",
+            "mangledName": "$s14ParkingLockiOS17LockHandleResult2O8rawValueACSgSS_tcfc",
+            "moduleName": "ParkingLockiOS",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS17LockHandleResult2O8rawValueSSvp",
+            "mangledName": "$s14ParkingLockiOS17LockHandleResult2O8rawValueSSvp",
+            "moduleName": "ParkingLockiOS",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS17LockHandleResult2O8rawValueSSvg",
+                "mangledName": "$s14ParkingLockiOS17LockHandleResult2O8rawValueSSvg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14ParkingLockiOS17LockHandleResult2O",
+        "mangledName": "$s14ParkingLockiOS17LockHandleResult2O",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LockStatus",
+        "printedName": "LockStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "down",
+            "printedName": "down",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockStatus.Type) -> ParkingLockiOS.LockStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockStatus",
+                    "printedName": "ParkingLockiOS.LockStatus",
+                    "usr": "s:14ParkingLockiOS10LockStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockStatus",
+                        "printedName": "ParkingLockiOS.LockStatus",
+                        "usr": "s:14ParkingLockiOS10LockStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS10LockStatusO4downyA2CmF",
+            "mangledName": "$s14ParkingLockiOS10LockStatusO4downyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "up",
+            "printedName": "up",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockStatus.Type) -> ParkingLockiOS.LockStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockStatus",
+                    "printedName": "ParkingLockiOS.LockStatus",
+                    "usr": "s:14ParkingLockiOS10LockStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockStatus",
+                        "printedName": "ParkingLockiOS.LockStatus",
+                        "usr": "s:14ParkingLockiOS10LockStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS10LockStatusO2upyA2CmF",
+            "mangledName": "$s14ParkingLockiOS10LockStatusO2upyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockStatus",
+                "printedName": "ParkingLockiOS.LockStatus",
+                "usr": "s:14ParkingLockiOS10LockStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockStatus",
+                "printedName": "ParkingLockiOS.LockStatus",
+                "usr": "s:14ParkingLockiOS10LockStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10LockStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14ParkingLockiOS10LockStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "ParkingLockiOS",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ParkingLockiOS10LockStatusO9hashValueSivp",
+            "mangledName": "$s14ParkingLockiOS10LockStatusO9hashValueSivp",
+            "moduleName": "ParkingLockiOS",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ParkingLockiOS10LockStatusO9hashValueSivg",
+                "mangledName": "$s14ParkingLockiOS10LockStatusO9hashValueSivg",
+                "moduleName": "ParkingLockiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS10LockStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s14ParkingLockiOS10LockStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "ParkingLockiOS",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14ParkingLockiOS10LockStatusO",
+        "mangledName": "$s14ParkingLockiOS10LockStatusO",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LockActionHex",
+        "printedName": "LockActionHex",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "checkStatus",
+            "printedName": "checkStatus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockActionHex.Type) -> (Swift.String) -> ParkingLockiOS.LockActionHex",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ParkingLockiOS.LockActionHex",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(secretKey: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockActionHex.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS13LockActionHexO11checkStatusyACSS_tcACmF",
+            "mangledName": "$s14ParkingLockiOS13LockActionHexO11checkStatusyACSS_tcACmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "turnLockDown",
+            "printedName": "turnLockDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockActionHex.Type) -> (Swift.String) -> ParkingLockiOS.LockActionHex",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ParkingLockiOS.LockActionHex",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(secretKey: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockActionHex.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS13LockActionHexO04turnD4DownyACSS_tcACmF",
+            "mangledName": "$s14ParkingLockiOS13LockActionHexO04turnD4DownyACSS_tcACmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "turnLockUp",
+            "printedName": "turnLockUp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockActionHex.Type) -> (Swift.String) -> ParkingLockiOS.LockActionHex",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ParkingLockiOS.LockActionHex",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(secretKey: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockActionHex.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS13LockActionHexO04turnD2UpyACSS_tcACmF",
+            "mangledName": "$s14ParkingLockiOS13LockActionHexO04turnD2UpyACSS_tcACmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "reset",
+            "printedName": "reset",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ParkingLockiOS.LockActionHex.Type) -> ParkingLockiOS.LockActionHex",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockActionHex",
+                    "printedName": "ParkingLockiOS.LockActionHex",
+                    "usr": "s:14ParkingLockiOS13LockActionHexO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ParkingLockiOS.LockActionHex.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockActionHex",
+                        "printedName": "ParkingLockiOS.LockActionHex",
+                        "usr": "s:14ParkingLockiOS13LockActionHexO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ParkingLockiOS13LockActionHexO5resetyA2CmF",
+            "mangledName": "$s14ParkingLockiOS13LockActionHexO5resetyA2CmF",
+            "moduleName": "ParkingLockiOS"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockActionHex",
+                "printedName": "ParkingLockiOS.LockActionHex",
+                "usr": "s:14ParkingLockiOS13LockActionHexO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LockActionHex",
+                "printedName": "ParkingLockiOS.LockActionHex",
+                "usr": "s:14ParkingLockiOS13LockActionHexO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS13LockActionHexO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14ParkingLockiOS13LockActionHexO2eeoiySbAC_ACtFZ",
+            "moduleName": "ParkingLockiOS",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14ParkingLockiOS13LockActionHexO",
+        "mangledName": "$s14ParkingLockiOS13LockActionHexO",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "TRACER",
+        "printedName": "TRACER(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:Sq"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:14ParkingLockiOS6TRACERyyypSgF",
+        "mangledName": "$s14ParkingLockiOS6TRACERyyypSgF",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ParkingLockiOS"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/HandleLock.swift",
+      "kind": "BooleanLiteral",
+      "offset": 503,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/HandleLock.swift",
+      "kind": "StringLiteral",
+      "offset": 544,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/HandleLock.swift",
+      "kind": "StringLiteral",
+      "offset": 723,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 804,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 838,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "StringLiteral",
+      "offset": 928,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "StringLiteral",
+      "offset": 968,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1099,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1146,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1194,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1246,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/BLEManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3420,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 168,
+      "length": 6,
+      "value": "\"019e\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 6,
+      "value": "\"01ae\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 168,
+      "length": 6,
+      "value": "\"019e\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 6,
+      "value": "\"01ae\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 263,
+      "length": 8,
+      "value": "\"140101\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 290,
+      "length": 8,
+      "value": "\"140102\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 263,
+      "length": 8,
+      "value": "\"140101\""
+    },
+    {
+      "filePath": "\/Users\/febriadrian\/parking-lock-ios\/ParkingLockiOS\/ParkingLockiOS\/Constant.swift",
+      "kind": "StringLiteral",
+      "offset": 290,
+      "length": 8,
+      "value": "\"140102\""
+    }
+  ]
+}

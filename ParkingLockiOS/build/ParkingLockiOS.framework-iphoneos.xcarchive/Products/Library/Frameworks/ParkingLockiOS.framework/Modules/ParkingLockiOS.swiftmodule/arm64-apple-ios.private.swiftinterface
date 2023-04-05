@@ -1,0 +1,113 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ParkingLockiOS
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreBluetooth
+import Foundation
+@_exported import ParkingLockiOS
+import Swift
+import _Concurrency
+import _StringProcessing
+public protocol HandleLockDelegate : AnyObject {
+  func lockDidTurnDown()
+  func lockDidTurnUp()
+  func didUpdateBluetoothState(isOn: Swift.Bool)
+  func bluetoothIsUnauthorized()
+  func didConnectParkingLock()
+}
+@_hasMissingDesignatedInitializers public class HandleLock {
+  public static let sharedInstance: ParkingLockiOS.HandleLock
+  public var delegate: ParkingLockiOS.HandleLockDelegate?
+  public var didFailCheckInOutRequest: Swift.Bool
+  public var secretKey: Swift.String
+  public var isLockConnected: Swift.Bool {
+    get
+  }
+  public func initBluetoothManger()
+  public func deinitBluetoothManager()
+  public func didEnterBackgroundMode()
+  public func shouldDelayingScanning(_ flag: Swift.Bool)
+  public func checkParkingLockType(deviceId: Swift.String?, lockType: Swift.String, secretKey: Swift.String?)
+  public func startScanning()
+  public func handleBluetoothParkingLock(action: ParkingLockiOS.LockActionHex)
+  @objc deinit
+}
+extension ParkingLockiOS.HandleLock : ParkingLockiOS.BLEClassManagerDelegate {
+  public func didUpdateBluetoothState(isOn: Swift.Bool)
+  public func bluetoothIsUnauthorized()
+  public func didConnectParkingLock()
+  public func didDisconnectParkingLock(isBluetoothOn: Swift.Bool)
+  public func didUpdateLockStatus(_ status: ParkingLockiOS.LockStatus)
+  public func didHandleLock(_ result: ParkingLockiOS.LockHandleResult?, _ result2: ParkingLockiOS.LockHandleResult2?)
+}
+public protocol BLEClassManagerDelegate : AnyObject {
+  func didUpdateBluetoothState(isOn: Swift.Bool)
+  func bluetoothIsUnauthorized()
+  func didConnectParkingLock()
+  func didDisconnectParkingLock(isBluetoothOn: Swift.Bool)
+  func didUpdateLockStatus(_ status: ParkingLockiOS.LockStatus)
+  func didHandleLock(_ result: ParkingLockiOS.LockHandleResult?, _ result2: ParkingLockiOS.LockHandleResult2?)
+}
+@objc @_inheritsConvenienceInitializers public class BLEClassManager : ObjectiveC.NSObject {
+  public static let sharedInstance: ParkingLockiOS.BLEClassManager
+  public var shouldDelayScanning: Swift.Bool
+  public var delegate: ParkingLockiOS.BLEClassManagerDelegate?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ParkingLockiOS.BLEClassManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+}
+extension ParkingLockiOS.BLEClassManager : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+}
+public enum LockHandleResult : Swift.String {
+  case unlocked
+  case locked
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LockHandleResult2 : Swift.String {
+  case unlocked
+  case locked
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LockStatus {
+  case down
+  case up
+  public static func == (a: ParkingLockiOS.LockStatus, b: ParkingLockiOS.LockStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum LockActionHex : Swift.Equatable {
+  case checkStatus(secretKey: Swift.String)
+  case turnLockDown(secretKey: Swift.String)
+  case turnLockUp(secretKey: Swift.String)
+  case reset
+  public static func == (a: ParkingLockiOS.LockActionHex, b: ParkingLockiOS.LockActionHex) -> Swift.Bool
+}
+public func TRACER(_ any: Any?)
+extension ParkingLockiOS.LockHandleResult : Swift.Equatable {}
+extension ParkingLockiOS.LockHandleResult : Swift.Hashable {}
+extension ParkingLockiOS.LockHandleResult : Swift.RawRepresentable {}
+extension ParkingLockiOS.LockHandleResult2 : Swift.Equatable {}
+extension ParkingLockiOS.LockHandleResult2 : Swift.Hashable {}
+extension ParkingLockiOS.LockHandleResult2 : Swift.RawRepresentable {}
+extension ParkingLockiOS.LockStatus : Swift.Equatable {}
+extension ParkingLockiOS.LockStatus : Swift.Hashable {}
