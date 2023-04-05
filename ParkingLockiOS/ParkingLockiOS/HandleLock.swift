@@ -15,42 +15,44 @@ public protocol HandleLockDelegate: AnyObject {
     func didConnectParkingLock()
 }
 
-public class HandleLock {
-    public static let sharedInstance = HandleLock()
+open class HandleLock {
+    weak open var delegate: HandleLockDelegate?
+    open var didFailCheckInOutRequest: Bool = false
     
-    public var delegate: HandleLockDelegate?
-    public var didFailCheckInOutRequest: Bool = false
-    public var secretKey: String = ""
-
+    private var secretKey: String = ""
     private var bluetoothManager: BLEClassManager?
     private var lockAction: LockActionHex?
     private var advertiseData: String?
     private var parkingLockType: String = ""
     
-    public var isLockConnected: Bool {
+    open class func sharedInstance() -> HandleLock {
+        HandleLock()
+    }
+    
+    open var isLockConnected: Bool {
         bluetoothManager?.isConnected ?? false
     }
     
-    public func initBluetoothManger() {
+    open func initBluetoothManger() {
         bluetoothManager = BLEClassManager()
         bluetoothManager?.delegate = self
     }
     
-    public func deinitBluetoothManager() {
+    open func deinitBluetoothManager() {
         bluetoothManager?.stopScanning()
         bluetoothManager?.cleanUp()
         bluetoothManager = nil
     }
     
-    public func didEnterBackgroundMode() {
+    open func didEnterBackgroundMode() {
         bluetoothManager?.scanningDidEnterBackground()
     }
     
-    public func shouldDelayingScanning(_ flag: Bool) {
+    open func shouldDelayingScanning(_ flag: Bool) {
         bluetoothManager?.shouldDelayScanning = flag
     }
     
-    public func checkParkingLockType(deviceId: String?, lockType: String, secretKey: String?) {
+    open func checkParkingLockType(deviceId: String?, lockType: String, secretKey: String?) {
         guard let macAddress = deviceId else {
             TRACER("Invalid Parking Lock Device ID")
             return
@@ -72,7 +74,7 @@ public class HandleLock {
         self.secretKey = secretKey ?? ""
     }
     
-    public func startScanning() {
+    private func startScanning() {
         if bluetoothManager == nil {
             initBluetoothManger()
         }
@@ -115,7 +117,7 @@ public class HandleLock {
 }
 
 extension HandleLock: BLEClassManagerDelegate {
-    public func didUpdateBluetoothState(isOn: Bool) {
+    func didUpdateBluetoothState(isOn: Bool) {
         if isOn {
             startScanning()
         }
@@ -123,22 +125,22 @@ extension HandleLock: BLEClassManagerDelegate {
         delegate?.didUpdateBluetoothState(isOn: isOn)
     }
     
-    public func bluetoothIsUnauthorized() {
+    func bluetoothIsUnauthorized() {
         TRACER("BLUETOOTH IS UNAUTHORIZED")
         delegate?.bluetoothIsUnauthorized()
     }
     
-    public func didConnectParkingLock() {
+    func didConnectParkingLock() {
         TRACER("PARKING LOCK CONNECTED")
         delegate?.didConnectParkingLock()
     }
     
-    public func didDisconnectParkingLock(isBluetoothOn: Bool) {
+    func didDisconnectParkingLock(isBluetoothOn: Bool) {
         TRACER("BLUETOOTH DISCONNECTED")
         didUpdateBluetoothState(isOn: isBluetoothOn)
     }
     
-    public func didUpdateLockStatus(_ status: LockStatus) {
+    func didUpdateLockStatus(_ status: LockStatus) {
         switch status {
         case .down:
             guard lockAction == .turnLockDown(secretKey: secretKey) else { return }
@@ -151,7 +153,7 @@ extension HandleLock: BLEClassManagerDelegate {
         lockAction = nil
     }
     
-    public func didHandleLock(_ result: LockHandleResult?, _ result2: LockHandleResult2?) {
+    func didHandleLock(_ result: LockHandleResult?, _ result2: LockHandleResult2?) {
         let status = result2 == .unlocked ? "UNLOCKED" : "LOCKED"
         let secretKey = self.secretKey
         

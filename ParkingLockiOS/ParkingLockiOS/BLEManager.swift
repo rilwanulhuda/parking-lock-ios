@@ -7,7 +7,7 @@
 
 import CoreBluetooth
 
-public protocol BLEClassManagerDelegate: AnyObject {
+protocol BLEClassManagerDelegate: AnyObject {
     func didUpdateBluetoothState(isOn: Bool)
     func bluetoothIsUnauthorized()
     func didConnectParkingLock()
@@ -16,15 +16,15 @@ public protocol BLEClassManagerDelegate: AnyObject {
     func didHandleLock(_ result: LockHandleResult?, _ result2: LockHandleResult2?)
 }
 
-public class BLEClassManager: NSObject {
-    public static let sharedInstance = BLEClassManager()
+class BLEClassManager: NSObject {
+    static let sharedInstance = BLEClassManager()
     
     private var centralManager: CBCentralManager?
     private var peripheral: CBPeripheral?
     private var characteristic: CBCharacteristic?
     private var advertiseData: String?
     
-    public var shouldDelayScanning: Bool = false
+    var shouldDelayScanning: Bool = false
     var isConnected: Bool = false
     
     private var lockAction: LockActionHex?
@@ -36,9 +36,9 @@ public class BLEClassManager: NSObject {
     private var parkingLockType2: Bool = false
     private var isBluetoothActive: Bool = false
     private var processIsNotCompleted: Bool = true
-    public var delegate: BLEClassManagerDelegate?
+    weak var delegate: BLEClassManagerDelegate?
     
-    public override init() {
+    override init() {
         super.init()
         let options = [CBCentralManagerOptionShowPowerAlertKey: false]
         centralManager = CBCentralManager(delegate: self, queue: nil, options: options)
@@ -47,6 +47,10 @@ public class BLEClassManager: NSObject {
     deinit {
         //
         TRACER("BLEManager has been deinitialized")
+    }
+    
+    func asd() {
+        
     }
     
     func startScanning(advertiseData: String) {
@@ -124,7 +128,7 @@ public class BLEClassManager: NSObject {
 }
 
 extension BLEClassManager: CBCentralManagerDelegate {
-    public func centralManagerDidUpdateState(_ central: CBCentralManager) {
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
         isBluetoothActive = central.state == .poweredOn
         
         if central.state == .unauthorized {
@@ -134,7 +138,7 @@ extension BLEClassManager: CBCentralManagerDelegate {
         delegate?.didUpdateBluetoothState(isOn: isBluetoothActive)
     }
     
-    public func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         TRACER("Description: Scanning Started.\nTask: Did Discover Peripheral")
         
         let manufactureData = advertisementData["kCBAdvDataManufacturerData"]
@@ -162,7 +166,7 @@ extension BLEClassManager: CBCentralManagerDelegate {
         }
     }
     
-    public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         isConnected = true
         stopScanning()
         self.peripheral?.discoverServices(nil)
@@ -170,7 +174,7 @@ extension BLEClassManager: CBCentralManagerDelegate {
         TRACER("didConnect peripheral with peripheral: \(peripheral)")
     }
     
-    public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         if let error = error {
             TRACER("Lock Disconnected with Error:\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDisconnectPeripheral")
         }
@@ -183,13 +187,13 @@ extension BLEClassManager: CBCentralManagerDelegate {
         }
     }
     
-    public func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
+    func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         TRACER("FAILED TO CONNECTING PARKING LOCK\nDescription: \(error?.localizedDescription ?? "null error")\nPeripheral: \(peripheral.description)\nTask: didFailToConnect")
     }
 }
 
 extension BLEClassManager: CBPeripheralDelegate {
-    public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
             TRACER("Characteristic Update Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nCharacteristic: \(characteristic.description)\nTask: didUpdateValueFor characteristic")
         }
@@ -287,7 +291,7 @@ extension BLEClassManager: CBPeripheralDelegate {
         }
     }
     
-    public func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let error = error {
             TRACER("Discover Characteristics Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDiscoverCharacteristicsFor service")
         }
@@ -331,7 +335,7 @@ extension BLEClassManager: CBPeripheralDelegate {
         }
     }
     
-    public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if let error = error {
             TRACER("Discover Services Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDiscoverServices")
         }
@@ -342,7 +346,7 @@ extension BLEClassManager: CBPeripheralDelegate {
         }
     }
     
-    public func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
             TRACER("Error Write Value for Characteristic\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nCharacteristic: \(characteristic.description)\nTask: didWriteValueFor characteristic")
         }
