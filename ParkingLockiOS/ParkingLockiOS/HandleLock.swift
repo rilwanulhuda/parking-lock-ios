@@ -16,42 +16,55 @@ public protocol HandleLockDelegate: AnyObject {
 }
 
 open class HandleLock {
-    weak open var delegate: HandleLockDelegate?
-    open var didFailCheckInOutRequest: Bool = false
+    public static let sharedInstance = HandleLock()
     
+    open weak var delegate: HandleLockDelegate?
+    
+    private var didFailCheckInOutRequest: Bool = false
     private var secretKey: String = ""
     private var bluetoothManager: BLEClassManager?
     private var lockAction: LockActionHex?
     private var advertiseData: String?
     private var parkingLockType: String = ""
     
-    open class func sharedInstance() -> HandleLock {
-        HandleLock()
-    }
+    init() {}
     
+    /// Indicates that your Parking Lock is connected with your device
     open var isLockConnected: Bool {
         bluetoothManager?.isConnected ?? false
     }
     
-    open func initBluetoothManger() {
+    func initBluetoothManger() {
         bluetoothManager = BLEClassManager()
         bluetoothManager?.delegate = self
     }
     
+    /// Deinit BLE usage:
+    /// Put this method in your viewDidDisappear
+    /// And every time when you have done using Parking Lock
     open func deinitBluetoothManager() {
         bluetoothManager?.stopScanning()
         bluetoothManager?.cleanUp()
         bluetoothManager = nil
     }
     
+    /// Use this function whenever your app is entering the background mode
     open func didEnterBackgroundMode() {
         bluetoothManager?.scanningDidEnterBackground()
+        bluetoothManager?.shouldDelayScanning = true
     }
     
-    open func shouldDelayingScanning(_ flag: Bool) {
-        bluetoothManager?.shouldDelayScanning = flag
-    }
     
+    /// This function will allows you to read the Parking Lock and connect to it
+    ///  And if its connected you can tell the Parking Lock to *Turn Up* or *Turn Down*
+    ///  
+    /// - Parameters:
+    ///   - deviceId: deviceId is your Parking Lock deviceId and deviceId is required params
+    ///   deviceId value should be "AB:CD:EF:GH:IJ:KL"
+    ///   - lockType: lockType means that your Parking Lock is type 1 or type 2
+    ///   set this value as "V1" or "V2"
+    ///   - secretKey: secretKey is your Parking Lock deviceKey
+    ///   secretKey is only *required* for Parking Lock type 2 or you can set this value as *nil* or ""
     open func checkParkingLockType(deviceId: String?, lockType: String, secretKey: String?) {
         guard let macAddress = deviceId else {
             TRACER("Invalid Parking Lock Device ID")
@@ -87,6 +100,12 @@ open class HandleLock {
         bluetoothManager?.startScanning(advertiseData: data)
     }
     
+    /// This function will allows you to ask the Parking Lock to *Turn Up* or *Turn Down*
+    /// - Parameter action: LockActionHex
+    /// .turnLockDown(secretKey: String?) tell the Parking Lock to *Turn Down*
+    /// .turnLockUp(secretKey: String?) tell the Parking Lock to *Turn Up*
+    /// and for the secret key you can set its value as *nil* or "" if you are using Parking Lock type 1
+    /// For Parking Lock type 2 secretKey is indispensable
     public func handleBluetoothParkingLock(action: LockActionHex) {
         if didFailCheckInOutRequest {
             didFailCheckInOutRequest = false
