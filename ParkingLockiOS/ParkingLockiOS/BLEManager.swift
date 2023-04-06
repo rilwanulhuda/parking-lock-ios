@@ -49,10 +49,6 @@ class BLEClassManager: NSObject {
         TRACER("BLEManager has been deinitialized")
     }
     
-    func asd() {
-        
-    }
-    
     func startScanning(advertiseData: String) {
         guard isBluetoothActive else {
             TRACER("PLEASE TURN ON YOUR BLUETOOTH")
