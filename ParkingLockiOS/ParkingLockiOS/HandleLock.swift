@@ -133,6 +133,16 @@ open class HandleLock {
             TRACER("Bluetooth is Writing \(action)")
         }
     }
+    
+    private func TRACE(_ any: Any?) {
+        #if DEBUG
+        let trace = """
+        Parking Lock Trace: \(any != nil ? any! : "nil")
+        """
+        print(trace)
+        #endif
+    }
+
 }
 
 extension HandleLock: BLEClassManagerDelegate {
