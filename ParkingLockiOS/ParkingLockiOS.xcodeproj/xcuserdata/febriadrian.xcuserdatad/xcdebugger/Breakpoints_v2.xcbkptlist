@@ -14,9 +14,9 @@
             filePath = "ParkingLockiOS/HandleLock.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "handleBluetoothParkingLock(action:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "checkParkingLockType(deviceId:lockType:secretKey:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "ParkingLockiOS/HandleLock.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "handleBluetoothParkingLock(action:)"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "startScanning()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "ParkingLockiOS/HandleLock.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "handleBluetoothParkingLock(action:)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "startScanning()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
