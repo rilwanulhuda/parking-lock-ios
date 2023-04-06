@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ParkingLockiOS-Swift.h</key>
 		<data>
-		MkiqKXwWJClr9H4lW6/QHr54CgI=
+		n+BaKiiTPjs9SoCP5mq3ikR9F2M=
 		</data>
 		<key>Headers/ParkingLockiOS.h</key>
 		<data>
@@ -18,43 +18,43 @@
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		hDSXI1yAqvWk/YNaZzTJJR87XJc=
+		B7sXla7cjaKXIwuVPovQ34I2h/M=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		sda/oyCRguyQYdjfh2CMU0OHLfg=
+		sA2EjI1YGuk7nwYLo54xIRJljXY=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		3wxG0uaBIMPCHkh2eINDHIzHk9k=
+		XG4Ej21rdKR2+6xy2QkIGs0XGGY=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sda/oyCRguyQYdjfh2CMU0OHLfg=
+		sA2EjI1YGuk7nwYLo54xIRJljXY=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PSC4NYoX4833aTZjemyp8zSL5Yg=
+		Sl2C8oejovyxUdTZkvCIksvkvjA=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hDSXI1yAqvWk/YNaZzTJJR87XJc=
+		B7sXla7cjaKXIwuVPovQ34I2h/M=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SMQOUicRv6iUBMbaDqJLCMyihQU=
+		HQc/s1Xuyc2I1RLGJHEupTC71ws=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qjIeh90TuG+E2Vkgcb8VlQBzVWo=
+		Cl0ugD4kRNvyd5tv6AVmwEowXgs=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SMQOUicRv6iUBMbaDqJLCMyihQU=
+		HQc/s1Xuyc2I1RLGJHEupTC71ws=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yTcRjmsqINrdybkVyLPbllGQbzo=
+		pProyALu8Z9ET9j/MA1g2KodWRc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,11 +67,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MkiqKXwWJClr9H4lW6/QHr54CgI=
+			n+BaKiiTPjs9SoCP5mq3ikR9F2M=
 			</data>
 			<key>hash2</key>
 			<data>
-			r2l5zm74J6p+G1gx9HvnLaCn2BFSMnyBlyavuiLZxxc=
+			msGHw4a7fJ7srTJx0dDJVGVKhzpIsq60GcpIjTNhjms=
 			</data>
 		</dict>
 		<key>Headers/ParkingLockiOS.h</key>
@@ -89,110 +89,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hDSXI1yAqvWk/YNaZzTJJR87XJc=
+			B7sXla7cjaKXIwuVPovQ34I2h/M=
 			</data>
 			<key>hash2</key>
 			<data>
-			TgRrXdDkRM8PmlechA9x/btWx7arEowIDSfhX0nAsLU=
+			XGbTqbAPmdEQXveGFFoPZK7HJ2wzQzDc/pXqHzd20aw=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sda/oyCRguyQYdjfh2CMU0OHLfg=
+			sA2EjI1YGuk7nwYLo54xIRJljXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			ELVhc0wiWzdJYVKmMjHRVsg1jwGLybsZIS3bBCxijA4=
+			IrDYDeY2EFAldVnp0MvH6gAqqHm7az2Ycswzs+7dRFE=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3wxG0uaBIMPCHkh2eINDHIzHk9k=
+			XG4Ej21rdKR2+6xy2QkIGs0XGGY=
 			</data>
 			<key>hash2</key>
 			<data>
-			qaBcL0XgTQb86stmKuGYdXVWSgsUwiZC5E7+ItvHpr4=
+			8RHjDwh1zQRT5gKFyUokKTPjtS7QnpgxD3rsnUWeNAc=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sda/oyCRguyQYdjfh2CMU0OHLfg=
+			sA2EjI1YGuk7nwYLo54xIRJljXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			ELVhc0wiWzdJYVKmMjHRVsg1jwGLybsZIS3bBCxijA4=
+			IrDYDeY2EFAldVnp0MvH6gAqqHm7az2Ycswzs+7dRFE=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PSC4NYoX4833aTZjemyp8zSL5Yg=
+			Sl2C8oejovyxUdTZkvCIksvkvjA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/kGg18khuUDjIOOHdn9h+pYcefDSsIrh0CRYkp4hPl0=
+			0vzgNqmIDNUAjc8VX6Hj493XMXDPuFLyrCV5Bwy+y08=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hDSXI1yAqvWk/YNaZzTJJR87XJc=
+			B7sXla7cjaKXIwuVPovQ34I2h/M=
 			</data>
 			<key>hash2</key>
 			<data>
-			TgRrXdDkRM8PmlechA9x/btWx7arEowIDSfhX0nAsLU=
+			XGbTqbAPmdEQXveGFFoPZK7HJ2wzQzDc/pXqHzd20aw=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SMQOUicRv6iUBMbaDqJLCMyihQU=
+			HQc/s1Xuyc2I1RLGJHEupTC71ws=
 			</data>
 			<key>hash2</key>
 			<data>
-			tZsD1rM/Ipew8mpoqLcCbt5w3iZS8OPobVMvLjNcs0g=
+			6WlO26wv3bI5WHBZBnMipvlbGOo106Qb5FEED4so3nY=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qjIeh90TuG+E2Vkgcb8VlQBzVWo=
+			Cl0ugD4kRNvyd5tv6AVmwEowXgs=
 			</data>
 			<key>hash2</key>
 			<data>
-			rIdfNkn19NHCKNg96YqYexhxNs84HcAtzrf84I+ThwA=
+			aAzzp79WItBA5XDTocz2yk82pORCX9FWyHcQKPqbazg=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SMQOUicRv6iUBMbaDqJLCMyihQU=
+			HQc/s1Xuyc2I1RLGJHEupTC71ws=
 			</data>
 			<key>hash2</key>
 			<data>
-			tZsD1rM/Ipew8mpoqLcCbt5w3iZS8OPobVMvLjNcs0g=
+			6WlO26wv3bI5WHBZBnMipvlbGOo106Qb5FEED4so3nY=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yTcRjmsqINrdybkVyLPbllGQbzo=
+			pProyALu8Z9ET9j/MA1g2KodWRc=
 			</data>
 			<key>hash2</key>
 			<data>
-			rCC/hVtdrbWbMdo/R5FLQDeEfmfOhGjYezG/HGdvz+0=
+			1tkwGmqOkwRtb7tDVHFtTPxiWuoNbJv/F1hiAOjt7JQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
