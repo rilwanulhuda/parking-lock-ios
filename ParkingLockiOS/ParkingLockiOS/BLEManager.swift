@@ -77,6 +77,8 @@ class BLEClassManager: NSObject {
     }
     
     func scanningDidEnterBackground() {
+        TRACER("BLE ENTER BACKGROUND MODE")
+        
         if processIsNotCompleted, parkingLockType2 {
             guard let char = reWriteChar else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
@@ -87,8 +89,6 @@ class BLEClassManager: NSObject {
         
         shouldDelayScanning = true
         print("BLEManager Logging: BLE will delaying scanning because in iOS 14 or above, if the app enter background mode and then enter the foreground mode, centralManager?.scanForPeripherals couldn't start its job immediately. It will need some delay. In this case we added 1.4 seconds")
-        
-        TRACER("BLE ENTER BACKGROUND MODE")
     }
     
     func stopScanning() {
