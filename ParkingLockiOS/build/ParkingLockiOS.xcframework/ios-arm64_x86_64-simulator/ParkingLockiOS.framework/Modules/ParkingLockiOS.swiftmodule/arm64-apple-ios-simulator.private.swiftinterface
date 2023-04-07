@@ -61,7 +61,9 @@ public enum LockActionHex : Swift.Equatable {
   case reset
   public static func == (a: ParkingLockiOS.LockActionHex, b: ParkingLockiOS.LockActionHex) -> Swift.Bool
 }
-public func TRACER(_ any: Any?)
+public struct IgnoreStruct {
+  public func testAccessinbililty()
+}
 extension ParkingLockiOS.LockHandleResult : Swift.Equatable {}
 extension ParkingLockiOS.LockHandleResult : Swift.Hashable {}
 extension ParkingLockiOS.LockHandleResult : Swift.RawRepresentable {}

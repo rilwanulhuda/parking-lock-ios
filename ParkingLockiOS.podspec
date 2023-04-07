@@ -1,10 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ParkingLockiOS"
-<<<<<<< HEAD
-  spec.version      = "0.0.3"
-=======
-  spec.version      = "0.0.2"
->>>>>>> 52ebf37 (fix framework)
+  spec.version      = "0.0.5"
   spec.summary      = "A simple Parking Lock SDK"
   spec.description  = "Parking Lock SDK is a framework that will make it easy for you to implement your Parking Lock"
 
@@ -37,19 +33,11 @@ Pod::Spec.new do |spec|
   spec.author             = { "rilwanulhuda" => "rilwanulhuda.dev@gmail.com" }
   spec.platform     = :ios, "10.0"
   spec.ios.deployment_target = "10.0"
-<<<<<<< HEAD
   spec.ios.vendored_frameworks = "ParkingLockiOS.xcframework"
-  spec.source       = { :http => "https://www.dropbox.com/s/fgt9gzt1hukyox2/ParkingLockiOS.xcframework.zip?dl=1" }
+  spec.source       = { :http => "https://www.dropbox.com/s/y9go2h8isr3px6d/ParkingLockiOS.xcframework.zip?dl=1" }
 #  spec.source       = { :git => "https://github.com/rilwanulhuda/parking-lock-ios.git", :tag => spec.version.to_s }
 #  spec.source_files  = "ParkingLockiOS/**/*.{swift}"
   spec.exclude_files = "Classes/Exclude"
-=======
-  #spec.ios.vendored_frameworks = "ParkingLockiOS.xcframework"
-  #spec.source       = { :http => "https://www.dropbox.com/s/b07ych6gm4n5fi2/ParkingLockiOS.xcframework.zip?dl=1" }
-  spec.source       = { :git => "https://github.com/rilwanulhuda/parking-lock-ios.git", :tag => spec.version.to_s }
-  spec.source_files  = "ParkingLockiOS/**/*.{swift}"
-  #spec.exclude_files = "Classes/Exclude"
->>>>>>> 52ebf37 (fix framework)
 
   # spec.public_header_files = "Classes/**/*.h"
 
