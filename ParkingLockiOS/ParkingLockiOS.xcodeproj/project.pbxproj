@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD27DC2429E0973500A4BF4F /* IgnoredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27DC2329E0973500A4BF4F /* IgnoredClass.swift */; };
 		FD78F07E29DDA287007D6BCB /* ParkingLockiOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = FD78F07D29DDA287007D6BCB /* ParkingLockiOS.docc */; };
 		FD78F07F29DDA287007D6BCB /* ParkingLockiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = FD78F07C29DDA287007D6BCB /* ParkingLockiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD78F08929DDA470007D6BCB /* HandleLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78F08829DDA470007D6BCB /* HandleLock.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD27DC2329E0973500A4BF4F /* IgnoredClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoredClass.swift; sourceTree = "<group>"; };
 		FD78F07929DDA287007D6BCB /* ParkingLockiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParkingLockiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD78F07C29DDA287007D6BCB /* ParkingLockiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParkingLockiOS.h; sourceTree = "<group>"; };
 		FD78F07D29DDA287007D6BCB /* ParkingLockiOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ParkingLockiOS.docc; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				FD78F08A29DDA66B007D6BCB /* BLEManager.swift */,
 				FD78F08C29DDA697007D6BCB /* Extension.swift */,
 				FD78F08E29DDA6D1007D6BCB /* Constant.swift */,
+				FD27DC2329E0973500A4BF4F /* IgnoredClass.swift */,
 			);
 			path = ParkingLockiOS;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				FD78F08F29DDA6D1007D6BCB /* Constant.swift in Sources */,
 				FD78F07E29DDA287007D6BCB /* ParkingLockiOS.docc in Sources */,
 				FD78F08D29DDA697007D6BCB /* Extension.swift in Sources */,
+				FD27DC2429E0973500A4BF4F /* IgnoredClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

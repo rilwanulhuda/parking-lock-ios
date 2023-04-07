@@ -134,7 +134,7 @@ open class HandleLock {
         }
     }
     
-    private func TRACE(_ any: Any?) {
+    private func TRACER(_ any: Any?) {
         #if DEBUG
         let trace = """
         Parking Lock Trace: \(any != nil ? any! : "nil")
@@ -142,7 +142,6 @@ open class HandleLock {
         print(trace)
         #endif
     }
-
 }
 
 extension HandleLock: BLEClassManagerDelegate {
@@ -207,7 +206,7 @@ extension HandleLock: BLEClassManagerDelegate {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            TRACER("Verifying Lock Status")
+            self.TRACER("Verifying Lock Status")
             self.bluetoothManager?.write(action: .checkStatus(secretKey: secretKey),
                                          key: secretKey,
                                          lockStatus: status)
