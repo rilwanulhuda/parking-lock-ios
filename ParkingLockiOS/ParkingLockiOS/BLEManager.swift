@@ -121,6 +121,15 @@ class BLEClassManager: NSObject {
         centralManager?.cancelPeripheralConnection(peripheral)
         isConnected = false
     }
+    
+    private func TRACER(_ any: Any?) {
+        #if DEBUG
+        let trace = """
+        Parking Lock Trace: \(any != nil ? any! : "nil")
+        """
+        print(trace)
+        #endif
+    }
 }
 
 extension BLEClassManager: CBCentralManagerDelegate {
