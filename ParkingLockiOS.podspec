@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ParkingLockiOS"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "A simple Parking Lock SDK"
   spec.description  = "Parking Lock SDK is a framework that will make it easy for you to implement your Parking Lock"
 

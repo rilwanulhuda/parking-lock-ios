@@ -181,3 +181,4 @@ iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,openframeworks,xcode,cocoapods
 README.md
+IgnoredClass.swift
