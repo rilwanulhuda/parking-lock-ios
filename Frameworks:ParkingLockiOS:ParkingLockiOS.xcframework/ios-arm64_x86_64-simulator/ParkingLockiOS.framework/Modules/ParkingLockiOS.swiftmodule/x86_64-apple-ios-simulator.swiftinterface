@@ -1,0 +1,75 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ParkingLockiOS
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreBluetooth
+import Foundation
+@_exported import ParkingLockiOS
+import Swift
+import _Concurrency
+import _StringProcessing
+public protocol HandleLockDelegate : AnyObject {
+  func lockDidTurnDown()
+  func lockDidTurnUp()
+  func didUpdateBluetoothState(isOn: Swift.Bool)
+  func bluetoothIsUnauthorized()
+  func didConnectParkingLock()
+}
+@_hasMissingDesignatedInitializers open class HandleLock {
+  public static let sharedInstance: ParkingLockiOS.HandleLock
+  weak open var delegate: ParkingLockiOS.HandleLockDelegate?
+  open var isLockConnected: Swift.Bool {
+    get
+  }
+  open func deinitBluetoothManager()
+  open func didEnterBackgroundMode()
+  open func checkParkingLockType(deviceId: Swift.String?, lockType: Swift.String, secretKey: Swift.String?)
+  public func handleBluetoothParkingLock(action: ParkingLockiOS.LockActionHex)
+  @objc deinit
+}
+public enum LockHandleResult : Swift.String {
+  case unlocked
+  case locked
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LockHandleResult2 : Swift.String {
+  case unlocked
+  case locked
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LockStatus {
+  case down
+  case up
+  public static func == (a: ParkingLockiOS.LockStatus, b: ParkingLockiOS.LockStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum LockActionHex : Swift.Equatable {
+  case checkStatus(secretKey: Swift.String)
+  case turnLockDown(secretKey: Swift.String)
+  case turnLockUp(secretKey: Swift.String)
+  case reset
+  public static func == (a: ParkingLockiOS.LockActionHex, b: ParkingLockiOS.LockActionHex) -> Swift.Bool
+}
+public struct IgnoreStruct {
+  public init()
+  public func testAccessinbililty()
+}
+extension ParkingLockiOS.LockHandleResult : Swift.Equatable {}
+extension ParkingLockiOS.LockHandleResult : Swift.Hashable {}
+extension ParkingLockiOS.LockHandleResult : Swift.RawRepresentable {}
+extension ParkingLockiOS.LockHandleResult2 : Swift.Equatable {}
+extension ParkingLockiOS.LockHandleResult2 : Swift.Hashable {}
+extension ParkingLockiOS.LockHandleResult2 : Swift.RawRepresentable {}
+extension ParkingLockiOS.LockStatus : Swift.Equatable {}
+extension ParkingLockiOS.LockStatus : Swift.Hashable {}
