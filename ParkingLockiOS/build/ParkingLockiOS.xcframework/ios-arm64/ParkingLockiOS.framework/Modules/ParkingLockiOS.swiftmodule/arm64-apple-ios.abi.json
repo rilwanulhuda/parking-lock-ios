@@ -1367,39 +1367,6 @@
         ]
       },
       {
-        "kind": "Function",
-        "name": "TRACER",
-        "printedName": "TRACER(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Void",
-            "printedName": "()"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Optional",
-            "printedName": "Any?",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ProtocolComposition",
-                "printedName": "Any"
-              }
-            ],
-            "usr": "s:Sq"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:14ParkingLockiOS6TRACERyyypSgF",
-        "mangledName": "$s14ParkingLockiOS6TRACERyyypSgF",
-        "moduleName": "ParkingLockiOS",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1415,6 +1382,50 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ParkingLockiOS"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IgnoreStruct",
+        "printedName": "IgnoreStruct",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "testAccessinbililty",
+            "printedName": "testAccessinbililty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ParkingLockiOS12IgnoreStructV19testAccessinbililtyyyF",
+            "mangledName": "$s14ParkingLockiOS12IgnoreStructV19testAccessinbililtyyyF",
+            "moduleName": "ParkingLockiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14ParkingLockiOS12IgnoreStructV",
+        "mangledName": "$s14ParkingLockiOS12IgnoreStructV",
+        "moduleName": "ParkingLockiOS",
+        "declAttributes": [
+          "AccessControl"
+        ]
       }
     ],
     "json_format_version": 8

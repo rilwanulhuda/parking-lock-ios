@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct IgnoreStruct {
-    func testAccessinbililty() {
+public struct IgnoreStruct {
+    public func testAccessinbililty() {
         print("this function still can be accessed")
     }
 }

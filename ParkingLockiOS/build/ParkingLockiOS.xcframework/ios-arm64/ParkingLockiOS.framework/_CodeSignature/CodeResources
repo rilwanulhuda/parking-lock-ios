@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		B7sXla7cjaKXIwuVPovQ34I2h/M=
+		QJdSS3bZXCxZ+MSDW4bRgID/2Ws=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		mKtdYaQjhfG7PqfyaptRWDdEJJE=
+		s+e+yR0j2vGr6C4kaHNfPC/DBf4=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		mKtdYaQjhfG7PqfyaptRWDdEJJE=
+		s+e+yR0j2vGr6C4kaHNfPC/DBf4=
 		</data>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		AdERKAq1aoIChLuHy0Y2/ixABa4=
+		kxum0KZyktSBgm9wfO0OlsGzWow=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,22 +69,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			B7sXla7cjaKXIwuVPovQ34I2h/M=
+			QJdSS3bZXCxZ+MSDW4bRgID/2Ws=
 			</data>
 			<key>hash2</key>
 			<data>
-			XGbTqbAPmdEQXveGFFoPZK7HJ2wzQzDc/pXqHzd20aw=
+			TdF+fgAXdOqMQl5qJc/jhGd/YQVSS2f2XQERbyzojzE=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mKtdYaQjhfG7PqfyaptRWDdEJJE=
+			s+e+yR0j2vGr6C4kaHNfPC/DBf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			+iL47tq2t5jUZs8UHut215wdcfKfqkqfv2wDARXBYHM=
+			bcNXCxDJ3xKatQ5YoOz9uucQsDaMWZamLcXt+Kt7YtY=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -102,22 +102,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mKtdYaQjhfG7PqfyaptRWDdEJJE=
+			s+e+yR0j2vGr6C4kaHNfPC/DBf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			+iL47tq2t5jUZs8UHut215wdcfKfqkqfv2wDARXBYHM=
+			bcNXCxDJ3xKatQ5YoOz9uucQsDaMWZamLcXt+Kt7YtY=
 			</data>
 		</dict>
 		<key>Modules/ParkingLockiOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AdERKAq1aoIChLuHy0Y2/ixABa4=
+			kxum0KZyktSBgm9wfO0OlsGzWow=
 			</data>
 			<key>hash2</key>
 			<data>
-			R1p3wjco/cpgHdkoqvAN+yF0fYq/hg39dEAfsK71PK8=
+			NGwD3/1O18HSgeuMxlMEuiPnJdxp7DxWApChnfDo/+E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
