@@ -1,0 +1,22 @@
+xcodebuild archive \
+-scheme ParkingLockiOS \
+-configuration Release \
+-destination 'generic/platform=iOS Simulator' \
+-archivePath './build/ParkingLockiOS.framework-iphonesimulator.xcarchive' \
+SKIP_INSTALL=NO \
+BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+
+
+xcodebuild archive \
+-scheme ParkingLockiOS \
+-configuration Release \
+-destination 'generic/platform=iOS' \
+-archivePath './build/ParkingLockiOS.framework-iphoneos.xcarchive' \
+SKIP_INSTALL=NO \
+BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+
+
+xcodebuild -create-xcframework \
+-framework './build/ParkingLockiOS.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/ParkingLockiOS.framework' \
+-framework './build/ParkingLockiOS.framework-iphoneos.xcarchive/Products/Library/Frameworks/ParkingLockiOS.framework' \
+-output './build/ParkingLockiOS.xcframework'
