@@ -128,8 +128,6 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
-ParkingLockiOS/build/
-ParkingLockiOS/ParkingLockiOS/Extension.swift
 
 # CocoaPods
 # We recommend against adding the Pods directory to your .gitignore. However
