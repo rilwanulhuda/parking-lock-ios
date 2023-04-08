@@ -129,7 +129,7 @@ playground.xcworkspace
 
 .build/
 ParkingLockiOS/build/
-IgnoredClass.swift
+ParkingLockiOS/ParkingLockiOS/Extension.swift
 
 # CocoaPods
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -182,3 +182,4 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/swift,openframeworks,xcode,cocoapods
 README.md
 IgnoredClass.swift
+ParkingLockiOS/ParkingLockiOS/Extension.swift
