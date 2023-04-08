@@ -46,12 +46,12 @@ class BLEClassManager: NSObject {
     
     deinit {
         //
-        TRACER("BLEManager has been deinitialized")
+        print("BLEManager has been deinitialized")
     }
     
     func startScanning(advertiseData: String) {
         guard isBluetoothActive else {
-            TRACER("PLEASE TURN ON YOUR BLUETOOTH")
+            print("PLEASE TURN ON YOUR BLUETOOTH")
             return
         }
         
@@ -77,7 +77,7 @@ class BLEClassManager: NSObject {
     }
     
     func scanningDidEnterBackground() {
-        TRACER("BLE ENTER BACKGROUND MODE")
+        print("BLE ENTER BACKGROUND MODE")
         
         if processIsNotCompleted, parkingLockType2 {
             guard let char = reWriteChar else { return }
@@ -98,12 +98,12 @@ class BLEClassManager: NSObject {
     
     func write(action: LockActionHex, key: String, lockStatus: String = "") {
         guard let data = !parkingLockType2 ? action.parkingLockType1.hexadecimal : action.parkingLockType2.hexadecimal else {
-            TRACER("Could not send command. Description: hexadecimal not found, Lock Action: \(action)")
+            print("Could not send command. Description: hexadecimal not found, Lock Action: \(action)")
             return
         }
 
         guard let characteristic = characteristic else {
-            TRACER("Could not send command. Description: characteristic not found, Lock Action: \(action)")
+            print("Could not send command. Description: characteristic not found, Lock Action: \(action)")
             return
         }
 
@@ -121,15 +121,6 @@ class BLEClassManager: NSObject {
         centralManager?.cancelPeripheralConnection(peripheral)
         isConnected = false
     }
-    
-    private func TRACER(_ any: Any?) {
-        #if DEBUG
-        let trace = """
-        Parking Lock Trace: \(any != nil ? any! : "nil")
-        """
-        print(trace)
-        #endif
-    }
 }
 
 extension BLEClassManager: CBCentralManagerDelegate {
@@ -144,7 +135,7 @@ extension BLEClassManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        TRACER("Description: Scanning Started.\nTask: Did Discover Peripheral")
+        print("Description: Scanning Started.\nTask: Did Discover Peripheral")
         
         let manufactureData = advertisementData["kCBAdvDataManufacturerData"]
         let macAddressName = advertisementData["kCBAdvDataLocalName"] as? String
@@ -165,9 +156,9 @@ extension BLEClassManager: CBCentralManagerDelegate {
             self.peripheral = peripheral
             self.peripheral?.delegate = self
             central.connect(peripheral, options: nil)
-            TRACER("PARKING LOCK FOUND\nDescription: User device found the parking lock.\nAdvertise Data: \(advertiseId)\nRSSI: \(RSSI)\nNext Step: Connecting to parking lock")
+            print("PARKING LOCK FOUND\nDescription: User device found the parking lock.\nAdvertise Data: \(advertiseId)\nRSSI: \(RSSI)\nNext Step: Connecting to parking lock")
         } else {
-            TRACER("Scanning lock with advertiseData: \(advertiseData ?? "")")
+            print("Scanning lock with advertiseData: \(advertiseData ?? "")")
         }
     }
     
@@ -176,15 +167,15 @@ extension BLEClassManager: CBCentralManagerDelegate {
         stopScanning()
         self.peripheral?.discoverServices(nil)
         delegate?.didConnectParkingLock()
-        TRACER("didConnect peripheral with peripheral: \(peripheral)")
+        print("didConnect peripheral with peripheral: \(peripheral)")
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         if let error = error {
-            TRACER("Lock Disconnected with Error:\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDisconnectPeripheral")
+            print("Lock Disconnected with Error:\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDisconnectPeripheral")
         }
         
-        TRACER("Lock Disconnected: \nDescription: Peripheral Disconnected\nPeripheral: \(peripheral.description)\nTask: didDisconnectPeripheral")
+        print("Lock Disconnected: \nDescription: Peripheral Disconnected\nPeripheral: \(peripheral.description)\nTask: didDisconnectPeripheral")
         
         cleanUp()
         if !isLockHandled {
@@ -193,14 +184,14 @@ extension BLEClassManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
-        TRACER("FAILED TO CONNECTING PARKING LOCK\nDescription: \(error?.localizedDescription ?? "null error")\nPeripheral: \(peripheral.description)\nTask: didFailToConnect")
+        print("FAILED TO CONNECTING PARKING LOCK\nDescription: \(error?.localizedDescription ?? "null error")\nPeripheral: \(peripheral.description)\nTask: didFailToConnect")
     }
 }
 
 extension BLEClassManager: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
-            TRACER("Characteristic Update Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nCharacteristic: \(characteristic.description)\nTask: didUpdateValueFor characteristic")
+            print("Characteristic Update Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nCharacteristic: \(characteristic.description)\nTask: didUpdateValueFor characteristic")
         }
         
         let resultHex = characteristic.value?.hexEncodedString() ?? ""
@@ -221,10 +212,10 @@ extension BLEClassManager: CBPeripheralDelegate {
         resultHex: \(resultHex)
         status: \(status)
         """
-        TRACER(trace)
+        print(trace)
 
         guard let action = lockAction else {
-            TRACER("BLE TRACE:\nDescription: Tracing Unknown Lock Hex\nLock Action: \(String(describing: lockAction))\nResult Hex: \(resultHex)\nStatus Code: \(String(status))")
+            print("BLE TRACE:\nDescription: Tracing Unknown Lock Hex\nLock Action: \(String(describing: lockAction))\nResult Hex: \(resultHex)\nStatus Code: \(String(status))")
             return
         }
 
@@ -244,10 +235,10 @@ extension BLEClassManager: CBPeripheralDelegate {
                     delegate?.didUpdateLockStatus(status)
                     processIsNotCompleted = false
                 } else if isLockHandled, LockHandleResult2(rawValue: String(status)) != nil {
-                    TRACER("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 } else {
-                    TRACER("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 }
             } else {
@@ -258,10 +249,10 @@ extension BLEClassManager: CBPeripheralDelegate {
                     delegate?.didUpdateLockStatus(status)
                     processIsNotCompleted = false
                 } else if isLockHandled, LockHandleResult(rawValue: String(status)) != nil {
-                    TRACER("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 } else {
-                    TRACER("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 }
             }
@@ -275,10 +266,10 @@ extension BLEClassManager: CBPeripheralDelegate {
                     delegate?.didHandleLock(nil, result2)
                     processIsNotCompleted = false
                 } else if Int(status) != nil {
-                    TRACER("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 } else {
-                    TRACER("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 }
             } else {
@@ -286,10 +277,10 @@ extension BLEClassManager: CBPeripheralDelegate {
                     delegate?.didHandleLock(result, nil)
                     processIsNotCompleted = false
                 } else if Int(status) != nil {
-                    TRACER("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unexpected Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 } else {
-                    TRACER("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
+                    print("BLE Unknown Lock Hex\nLock Action: \(action)\nResult Hex: \(resultHex)\nStatus Code: \(status)")
                     processIsNotCompleted = false
                 }
             }
@@ -298,13 +289,13 @@ extension BLEClassManager: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let error = error {
-            TRACER("Discover Characteristics Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDiscoverCharacteristicsFor service")
+            print("Discover Characteristics Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDiscoverCharacteristicsFor service")
         }
         
-        TRACER("Discover Peripheral Characteristics\nError: \(error?.localizedDescription ?? "null")\nPeripheral: \(peripheral.description)\nTask: didDiscoverCharacteristicsFor service")
+        print("Discover Peripheral Characteristics\nError: \(error?.localizedDescription ?? "null")\nPeripheral: \(peripheral.description)\nTask: didDiscoverCharacteristicsFor service")
         
         guard let services = peripheral.services else {
-            TRACER("didDiscoverCharacteristicsFor service could not find any services. line 283")
+            print("didDiscoverCharacteristicsFor service could not find any services. line 283")
             return
         }
         
@@ -315,7 +306,7 @@ extension BLEClassManager: CBPeripheralDelegate {
         }
         
         guard let serviceCharacteristics = service.characteristics, serviceCharacteristics.count > 0 else {
-            TRACER("Error when getting service.characteristics line 294")
+            print("Error when getting service.characteristics line 294")
             return
         }
         
@@ -342,7 +333,7 @@ extension BLEClassManager: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if let error = error {
-            TRACER("Discover Services Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDiscoverServices")
+            print("Discover Services Error\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nTask: didDiscoverServices")
         }
         
         guard let services = peripheral.services else { return }
@@ -353,11 +344,11 @@ extension BLEClassManager: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
-            TRACER("Error Write Value for Characteristic\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nCharacteristic: \(characteristic.description)\nTask: didWriteValueFor characteristic")
+            print("Error Write Value for Characteristic\nError: \(error.localizedDescription)\nPeripheral: \(peripheral.description)\nCharacteristic: \(characteristic.description)\nTask: didWriteValueFor characteristic")
         }
         
         if let action = lockAction {
-            TRACER("Success Write Value for Characteristic\nCharacteristic: \(characteristic.description)\nPeripheral: \(peripheral.description)\nLock Action: \(action)\nTask: didWriteValueFor characteristic")
+            print("Success Write Value for Characteristic\nCharacteristic: \(characteristic.description)\nPeripheral: \(peripheral.description)\nLock Action: \(action)\nTask: didWriteValueFor characteristic")
         }
     }
 }

@@ -67,7 +67,7 @@ open class HandleLock {
     ///   secretKey is only *required* for Parking Lock type 2 or you can set this value as *nil* or ""
     open func checkParkingLockType(deviceId: String?, lockType: String, secretKey: String?) {
         guard let macAddress = deviceId else {
-            TRACER("Invalid Parking Lock Device ID")
+            print("Invalid Parking Lock Device ID")
             return
         }
         
@@ -80,7 +80,7 @@ open class HandleLock {
             
             initBluetoothManger()
         } else {
-            TRACER("Invalid Lock Device ID, please contact our attendants.")
+            print("Invalid Lock Device ID, please contact our attendants.")
         }
         
         parkingLockType = lockType
@@ -93,7 +93,7 @@ open class HandleLock {
         }
         
         guard let data = advertiseData, data.count == 12 || data.count == 14 else {
-            TRACER("Could Not Start Scanning Because Invalid Advertise Data")
+            print("Could Not Start Scanning Because Invalid Advertise Data")
             return
         }
         
@@ -119,10 +119,10 @@ open class HandleLock {
                 break
             }
             
-            TRACER("Resending Check In/Out request because previous one was failed.")
+            print("Resending Check In/Out request because previous one was failed.")
         } else {
             guard bluetoothManager?.isConnected == true else {
-                TRACER("Lock Disconnected. Trying to handle lock, but lock is disconnected.\nRescanning Lock...")
+                print("Lock Disconnected. Trying to handle lock, but lock is disconnected.\nRescanning Lock...")
                 startScanning()
                 return
             }
@@ -130,17 +130,8 @@ open class HandleLock {
             lockAction = action
             bluetoothManager?.write(action: action, key: secretKey)
             
-            TRACER("Bluetooth is Writing \(action)")
+            print("Bluetooth is Writing \(action)")
         }
-    }
-    
-    private func TRACER(_ any: Any?) {
-        #if DEBUG
-        let trace = """
-        Parking Lock Trace: \(any != nil ? any! : "nil")
-        """
-        print(trace)
-        #endif
     }
 }
 
@@ -154,17 +145,17 @@ extension HandleLock: BLEClassManagerDelegate {
     }
     
     func bluetoothIsUnauthorized() {
-        TRACER("BLUETOOTH IS UNAUTHORIZED")
+        print("BLUETOOTH IS UNAUTHORIZED")
         delegate?.bluetoothIsUnauthorized()
     }
     
     func didConnectParkingLock() {
-        TRACER("PARKING LOCK CONNECTED")
+        print("PARKING LOCK CONNECTED")
         delegate?.didConnectParkingLock()
     }
     
     func didDisconnectParkingLock(isBluetoothOn: Bool) {
-        TRACER("BLUETOOTH DISCONNECTED")
+        print("BLUETOOTH DISCONNECTED")
         didUpdateBluetoothState(isOn: isBluetoothOn)
     }
     
@@ -192,7 +183,7 @@ extension HandleLock: BLEClassManagerDelegate {
             case .locked:
                 delegate?.lockDidTurnUp()
             default:
-                TRACER("Unknown Lock Handle Result")
+                print("Unknown Lock Handle Result")
             }
         } else {
             switch result {
@@ -201,12 +192,12 @@ extension HandleLock: BLEClassManagerDelegate {
             case .locked:
                 delegate?.lockDidTurnUp()
             default:
-                TRACER("Unknown Lock Handle Result")
+                print("Unknown Lock Handle Result")
             }
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.TRACER("Verifying Lock Status")
+            print("Verifying Lock Status")
             self.bluetoothManager?.write(action: .checkStatus(secretKey: secretKey),
                                          key: secretKey,
                                          lockStatus: status)
